@@ -1,0 +1,237 @@
+* {
+  /* Estilização Geral da Página*/
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  /* Cores */
+  --cor01: #26434f;
+  --cor02: #47c19c;
+}
+
+.logo-header {
+  /* Logo do Cabeçalho */
+  width: 180px;
+}
+
+.header {
+  /* Cabeçalho */
+  min-height: 40px;
+  background-color: var(--cor02);
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 15px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.buttonGroup {
+  /* Grupo de Botões */
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.button {
+  /* Botões */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: var(--cor01);
+  cursor: pointer;
+}
+
+.button:hover {
+  /* Botões - HOVER */
+  border-bottom: 2px solid #1faa80;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.title-page {
+  /* Título da Página */
+  font-size: 26px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.subtitle-page {
+  /* Subtítulo da Página */
+  padding: 15px;
+  text-align: center;
+}
+
+.grid-layout {
+  /* Grid Layout - section */
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 30px;
+  gap: 20px;
+  grid-template-areas: "main-content category-content";
+}
+
+.main-content {
+  /* Conteúdo principal */
+  flex: 1 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  grid-area: main-content;
+}
+
+.item-mc {
+  height: 300px;
+  width: 310px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img-mc {
+  height: 180px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.img-mc:hover {
+  border-color: white;
+}
+
+.item-mc:hover {
+  border: 2px solid black;
+  transition: 0.5s;
+}
+
+.title-mc {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.description-mc {
+  padding: 10px;
+}
+
+/* -------------------------------------- */
+
+.category-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor01);
+  padding: 15px;
+  border-radius: 10px;
+  gap: 10px;
+  align-items: center;
+  grid-template-areas: category-content;
+}
+
+.item-cc {
+  width: 250px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.item-cc:hover {
+  border: 2px solid gainsboro;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.img-cc {
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.title-cc {
+  color: white;
+  text-align: center;
+  padding: 6px;
+}
+
+.subtitle-cc {
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+/* -------------------- */
+
+.logo-footer {
+  width: 180px;
+}
+
+.footer {
+  min-height: 40px;
+  background-color: var(--cor02);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footerAnchor {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.footer-onebitcode {
+  padding: 10px;
+  background-color: black;
+  width: 200px;
+  border-radius: 10px 0px 10px 0;
+}
+
+@media (max-width: 670px) {
+  .grid-layout {
+    grid-template-areas:
+      "main-content"
+      "category-content";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 365px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .img-mc {
+    height: 150px;
+  }
+}
